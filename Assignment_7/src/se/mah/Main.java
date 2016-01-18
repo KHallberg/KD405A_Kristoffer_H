@@ -1,4 +1,4 @@
-package se.mah.ke.k3lara;
+package se.mah;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -40,5 +40,3 @@ public class Main extends JFrame {
 	}
 
 }
-
-
