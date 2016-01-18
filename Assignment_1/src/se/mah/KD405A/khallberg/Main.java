@@ -1,4 +1,4 @@
-package se.mah;
+package se.mah.KD405A.khallberg;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
