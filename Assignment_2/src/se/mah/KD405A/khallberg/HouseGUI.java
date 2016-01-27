@@ -117,7 +117,7 @@ public class HouseGUI extends JFrame {
 		for(int i=0; i<houses.length; i=i+1){
 			
 			if(houses[i].getYearBuilt() !=0 && houses[i].getSize() !=0 ){
-				txtr.append("Ett hus är byggt "+houses[i].getYearBuilt()+" och är "+houses[i].getSize()+" kvm stort.\n");
+				txtr.append("Hus nummer "+i+" är byggt "+houses[i].getYearBuilt()+" och är "+houses[i].getSize()+" kvm stort.\n");
 			}
 			else{
 				txtr.append("No house was built \nYear or size not valid, must be built between 1800 and 2015 and between 10 and 1000 m2.\n"); 
