@@ -105,9 +105,10 @@ public class Main extends JFrame {
 		contentPane.add(lblNewLabel_2);
 		
 		JButton btnSpara = new JButton("Spara");
-		btnSpara.setBackground(Color.WHITE);
+		btnSpara.setBackground(Color.PINK);
 		btnSpara.setForeground(new Color(255, 153, 0));
 		btnSpara.setBounds(467, 339, 100, 39);
+		//btnSpara.setOpaque(true); //background color, rect under the buttom
 		contentPane.add(btnSpara);
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
