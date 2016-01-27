@@ -1,0 +1,29 @@
+
+ public class House{
+ // b) Instansvariabler
+	private int yearBuilt;
+	private int size;
+	private final int minSize = 10;
+
+// a) Konstruktor
+  public House(int yearBuilt,int size){ 
+	//diverse kod
+  }
+// c) Instansmetod
+  public int getYearBuilt(){
+	//diverse kod 
+  }
+// c) Instansmetod
+  public int getSize(){ 
+	//diverse kod
+  } 
+ }
+ 
+ d) Det innebär att variablen är definitiv och inte kan ändras
+ 
+ e) Privat kommer du bara åt inom klassen tillskillnad från Public som du kan komma åt utifrån.
+ 
+ f) UML diagram - se UML-diagram folder
+ 
+ 
+

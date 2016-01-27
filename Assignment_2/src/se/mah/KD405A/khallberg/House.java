@@ -9,14 +9,13 @@ public class House {
 	private final int yearNewest = 2015;
 
 	public House(int yearBuilt, int size) {
-		//this.yearBuilt = yearBuilt;
-		if(size>=minSize && size<=maxSize){
+		if(size>=minSize && size<=maxSize){					// sets size to 0 if not in the right range
 			this.size = size;	
 		}
 		else{
-			this.size = 0;
+			this.size = 0;									
 		}
-		if(yearBuilt>=yearOldest && yearBuilt<=yearNewest){
+		if(yearBuilt>=yearOldest && yearBuilt<=yearNewest){	// sets year to 0 if not in the right range
 			this.yearBuilt = yearBuilt;
 		}
 		else{

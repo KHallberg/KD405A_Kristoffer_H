@@ -9,7 +9,6 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JTextArea;
 import javax.swing.JScrollPane;
-import java.awt.GridLayout;
 
 public class HouseGUI extends JFrame {
 
@@ -47,7 +46,7 @@ public class HouseGUI extends JFrame {
 		scrollPane.setBounds(5, 5, 597, 411);
 		contentPane.add(scrollPane);
 		
-		//uppgift 1.2
+		//uppgift 1.2 
 		
 		House house1 = new House(1710, 57);
 		House house2 = new House(1910, 8);
@@ -90,23 +89,24 @@ public class HouseGUI extends JFrame {
 		String d;
 		
 		String a = "Uppgift 1.2:\n";
-		if(house1.getYearBuilt() !=0 && house1.getSize() !=0 ){
+		// checks if the YearBuilt and Size is valid if not string value is set to an error message
+		if(house1.getYearBuilt() !=0 && house1.getSize() !=0 ){ 
 		b = "Ett hus är byggt " +house1.getYearBuilt()+" som är "+house1.getSize()+" kvm stort.\n";
 		}
 		else{
-		b ="No house was built \nYear or size not valid, must be built between 1800 and 2015 and between 10 and 1000 m2.\n";
+		b ="Inget hus blev byggt \nFel år eller storlek, måste vara byggt mellan 1800 och 2015 och mellan 10 och 1000 kvm.\n";
 		}
 		if(house2.getYearBuilt() !=0 && house2.getSize() !=0 ){
 			c = "Ett hus är byggt " +house2.getYearBuilt()+" och är "+house2.getSize()+" kvm stort.\n";
 			}
 			else{
-			c ="No house was built \nYear or size not valid, must be built between 1800 and 2015 and between 10 and 1000 m2.\n";
+			c ="Inget hus blev byggt \nFel år eller storlek, måste vara byggt mellan 1800 och 2015 och mellan 10 och 1000 kvm.\n";
 			}
 		if(house3.getYearBuilt() !=0 && house3.getSize() !=0 ){
 			d = "Ett hus är byggt " +house3.getYearBuilt()+" och är "+house3.getSize()+" kvm stort.\n";
 			}
 			else{
-			d ="No house was built \nYear or size not valid, must be built between 1800 and 2015 and between 10 and 1000 m2.\n";
+			d ="Inget hus blev byggt \nFel år eller storlek, måste vara byggt mellan 1800 och 2015 och mellan 10 och 1000 kvm.\n";
 			}
 		
 		txtr.append(a+b+c+d);
@@ -115,24 +115,24 @@ public class HouseGUI extends JFrame {
 		//Uppgift 1.3 print
 		txtr.append("Uppgift 1.3:\n");
 		for(int i=0; i<houses.length; i=i+1){
-			
+			// checks if the YearBuilt and Size is valid if not error message
 			if(houses[i].getYearBuilt() !=0 && houses[i].getSize() !=0 ){
 				txtr.append("Hus nummer "+i+" är byggt "+houses[i].getYearBuilt()+" och är "+houses[i].getSize()+" kvm stort.\n");
 			}
 			else{
-				txtr.append("No house was built \nYear or size not valid, must be built between 1800 and 2015 and between 10 and 1000 m2.\n"); 
+				txtr.append("Inget hus blev byggt \nFel år eller storlek, måste vara byggt mellan 1800 och 2015 och mellan 10 och 1000 kvm.\n"); 
 			}
 		}
 		
 		//Uppgift 1.4 print
 		txtr.append("Uppgift 1.4:\n");
-		
+		// checks if the YearBuilt and Size is valid if not error message
 		for(House h:houseList){
 			if(h.getYearBuilt() !=0 && h.getSize() !=0 ){
 				txtr.append("Ett hus är byggt "+h.getYearBuilt()+" och är "+h.getSize()+" kvm stort.\n");
 			}
 			else{
-				txtr.append("No house was built \nYear or size not valid, must be built between 1800 and 2015 and between 10 and 1000 m2.\n"); 
+				txtr.append("Inget hus blev byggt \nFel år eller storlek, måste vara byggt mellan 1800 och 2015 och mellan 10 och 1000 kvm.\n"); 
 			}
 		}
 
