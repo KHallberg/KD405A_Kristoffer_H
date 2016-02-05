@@ -58,7 +58,7 @@ public class HouseGUI extends JFrame {
 		
 		houses[0] = new House(1987,451);
 		houses[1] = new House(1878,874);
-		houses[2] = new House(2012,75);
+		houses[2] = new House(2086,75);
 		houses[3] = new House(1851,625);
 		houses[4] = new House(2014,973);
 		houses[5] = new House(1889,234);
