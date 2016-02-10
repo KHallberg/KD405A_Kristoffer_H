@@ -90,7 +90,7 @@ public class Bike {
 	public int getPrice(){
 		return this.price;
 	}
-	/**Sets the price*/
+	/**Sets the price*/  // ska även kollas om priset är rätt
 	public void setPrice(int price){
 		this.price = price;
 	}

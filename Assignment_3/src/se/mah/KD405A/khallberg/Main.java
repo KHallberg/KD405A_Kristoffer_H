@@ -25,7 +25,7 @@ public class Main {
 		int index = 0;
 		//Loops thrue the the arrayList and prints our it´s value in console
 		for(Bike b:bikeList){
-				System.out.println("Cykeln på plats nr: "+(index++)+" kostar: "+b.getPrice()+" är "+b.getColor()+" och "+ b.getSize()+ " tum stor.");
+				System.out.println("Cykeln på plats nr: "+(index ++) +" kostar: "+b.getPrice()+" är "+b.getColor()+" och "+ b.getSize()+ " tum stor.");
 				
 		}
 	}

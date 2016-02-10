@@ -25,3 +25,4 @@ public class BikeStore {
 	}
 
 }
+//bikes.add(new Bike(color, size, price)); Same same but different
