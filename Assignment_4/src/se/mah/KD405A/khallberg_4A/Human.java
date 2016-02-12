@@ -15,9 +15,9 @@ public class Human {
 	public void buyDog(Dog dog){
 		this.dog=dog;
 	}
-
+	
 	public String getInfo(){
-		String s;
+		String s = "";
 		if(name!=null){
 			if(dog!=null){
 				s = name + " äger en hund som heter "+ dog.getName();
@@ -26,11 +26,6 @@ public class Human {
 				s = name + " äger ingen hund";
 			}
 		}
-		else{
-			s = "du måste vara en människa för att köpa en hund.";
-		}
 		return s;
 	}
-
-	
 }

@@ -9,12 +9,14 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JTextArea;
 import javax.swing.JScrollPane;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
 
 public class AnimalGUI extends JFrame {
 
 	private JPanel contentPane;
 	private ArrayList<Animal> animalList = new ArrayList();
-	//private String animalInfo;
+	
 
 	/**
 	 * Launch the application.
@@ -24,7 +26,6 @@ public class AnimalGUI extends JFrame {
 			public void run() {
 				try {
 					AnimalGUI frame = new AnimalGUI();
-
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -32,7 +33,7 @@ public class AnimalGUI extends JFrame {
 			}
 		});
 	}
-
+	//Method that adds animals to the arrayList animalLIst
 	private void addAnimals(){
 		this.animalList.add(new Dog("Canis lupus", 3, true));
 		this.animalList.add(new Dog("Canis lupus", 8, false, "Selma"));
@@ -47,23 +48,31 @@ public class AnimalGUI extends JFrame {
 	 */
 	public AnimalGUI() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 728, 300);
+		setBounds(100, 100, 728, 525);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(6, 6, 716, 266);
+		scrollPane.setBounds(6, 6, 716, 240);
 		contentPane.add(scrollPane);
 		
 		JTextArea txtrAnimallist = new JTextArea();
 		scrollPane.setViewportView(txtrAnimallist);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(AnimalGUI.class.getResource("/se/mah/KD405A/khallberg_4A/img/snake_man-dog-cat.png")));
+		lblNewLabel.setBounds(0, 0, 728, 503);
+		contentPane.add(lblNewLabel);
+		
 		addAnimals();
+		//Loops through the ArrayList animalsList and calls the method getInfo - String animalInfo gets the value
 		for(Animal a: animalList){
 			String animalInfo = a.getInfo();
-		System.out.println(animalInfo);
-		txtrAnimallist.append(animalInfo);
+		//System.out.println(animalInfo);
+			
+		txtrAnimallist.append(animalInfo); // sets text from animalInfo to the text Area
 		}
 	}
 }

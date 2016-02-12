@@ -8,6 +8,7 @@ public abstract class Mammal extends Animal {
 		super(latinName);
 		this.gestationTime = gestationTime;
 	}
+	/** Method that gets the value of gestationTime */
 	public int getGestationTime(){
 		return this.gestationTime;
 	}
