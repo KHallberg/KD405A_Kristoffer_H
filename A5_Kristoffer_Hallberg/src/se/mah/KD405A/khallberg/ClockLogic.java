@@ -19,7 +19,15 @@ public class ClockLogic {
 		new TimeThread().start();
 	}
 	
-
+	
+	public static String nice (int i){
+		String s = String.valueOf (i);
+		if(s.length()==1){
+			s = "0 +" + s;
+		}
+		return s;
+	}
+	
 	// sets the alarm
 	public void setAlarm(int hour, int minute) {
 		this.alarmHour = hour;

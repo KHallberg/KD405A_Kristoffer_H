@@ -39,6 +39,8 @@ public class DigitalClockGUI extends JFrame implements ActionListener {
 	public int checkHour;
 	public int checkMinute;
 
+	private String s;
+
 	/**
 	 * Launch the application.
 	 */
@@ -177,11 +179,14 @@ public class DigitalClockGUI extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == btnSetAlarm) {
-			checkHour = Integer.parseInt(txtHour.getText());
-			checkMinute = Integer.parseInt(txtMin.getText());
-			
-			if (checkHour >= 0 && checkHour < 24 && checkMinute >= 0 && checkMinute <= 59) {
-				this.activateAlarm(true);
+
+			if (txtHour.getText().length() == 2 && txtMin.getText().length() == 2) {
+				checkHour = Integer.parseInt(txtHour.getText());
+				checkMinute = Integer.parseInt(txtMin.getText());
+
+				if (checkHour >= 0 && checkHour < 24 && checkMinute >= 0 && checkMinute <= 59) {
+					this.activateAlarm(true);
+				}
 			} else {
 				lblAlarm.setText("Next beer: Not valid");
 			}
