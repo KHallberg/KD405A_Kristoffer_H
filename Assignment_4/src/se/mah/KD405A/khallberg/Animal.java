@@ -11,6 +11,7 @@ public abstract class Animal {
 	
 	public abstract String getInfo();
 	/**Method to set friendlyName */
+	
 	public void setFriendlyName(String name){
 		this.friendlyName = name;
 	}
