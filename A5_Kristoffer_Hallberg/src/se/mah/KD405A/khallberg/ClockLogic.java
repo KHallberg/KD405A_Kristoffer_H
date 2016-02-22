@@ -11,6 +11,7 @@ public class ClockLogic {
 	private int alarmHour = -1;
 	private int alarmMinute = -1;
 	private String s;
+
 	// constructor
 	public ClockLogic(DigitalClockGUI digitalClockGUI) {
 		this.clockGUI = digitalClockGUI;
@@ -18,21 +19,19 @@ public class ClockLogic {
 		// starts the timeThred
 		new TimeThread().start();
 	}
-	
-	
-	public static String nice (int i){
-		String s = String.valueOf (i);
-		if(s.length()==1){
+
+	public static String nice(int i) {
+		String s = String.valueOf(i);
+		if (s.length() == 1) {
 			s = "0 +" + s;
 		}
 		return s;
 	}
-	
+
 	// sets the alarm
 	public void setAlarm(int hour, int minute) {
 		this.alarmHour = hour;
 		this.alarmMinute = minute;
-		
 
 		System.out.println("set");
 	}
@@ -51,10 +50,7 @@ public class ClockLogic {
 			// creates a decimal format
 			DecimalFormat timeFormat = new DecimalFormat("00");
 			while (true) {
-				try {
-					Thread.sleep(900);
-				} catch (InterruptedException e) {
-				}
+
 				Calendar rightNow = Calendar.getInstance();
 				int hour = rightNow.get(Calendar.HOUR_OF_DAY);
 				int min = rightNow.get(Calendar.MINUTE);
@@ -68,7 +64,10 @@ public class ClockLogic {
 				}
 				if (hour == alarmHour && min == alarmMinute && sec == 30) {
 					clockGUI.activateAlarm(false);
-					
+				}
+				try {
+					Thread.sleep(900);
+				} catch (InterruptedException e) {
 				}
 
 			}
