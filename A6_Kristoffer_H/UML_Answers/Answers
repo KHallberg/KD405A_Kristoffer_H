@@ -1,0 +1,19 @@
+Fråga 1. 
+Mellan vilka stationer sker sökningen?  Från Malmö C till Lund C
+
+Fråga 2. Hur ser en QueryString ut om man bara vill ha 5 resultatet för sökningen (Titta i xsd filen för sök-
+￼￼￼￼￼￼ningen)? 
+http://www.labs.skanetrafiken.se/v2.2/resultspage.asp?cmdaction=next&selPointFr=0|80000|0&selPointTo=0|81216|0&NoOf=5
+
+Fråga 3.
+ <Journeys></Journeys> innehåller resor som matchar sökningen
+  		<Journey></Jouney> innehåller informationen om en resa
+  			<RouteLinks></RouteLinks> innehåller delresor
+  				<RouteLink></RouteLink>  innehåller information om delresorna , pris, avgång, ankomst, färdmedel etc.
+  				
+Fråga 4.
+  <NoOfChanges>	- är placerad under taggen <Journey>
+  
+Fråga 5.
+<RouteLinks>
+  
